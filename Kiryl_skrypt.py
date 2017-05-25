@@ -45,7 +45,7 @@ for home, draw, away in zip(bookies_H,bookies_A,bookies_D):
     ax.set_xlim([0, 8])
     plt.show()
 
-#_______All bookmakers - Home/Draw/Away odds
+#_______All bookmakers - Home/Draw/Away odds | KDE + BOXPLOTS
 bookies_types = {'Home odds':bookies_H, 'Draw odds':bookies_D, 'Away odds':bookies_A}
 for bookie_type, bookie_list in bookies_types.items():
     fig, ax = plt.subplots()
@@ -66,9 +66,6 @@ for bookie_type, bookie_list in bookies_types.items():
     plt.legend(loc='best')
     plt.figure(figsize=(30,30))
     plt.show()
-
-#_______ALL bookmakers - boxplots
-for bookie_type, bookie_list in bookies_types.items():
     col_sel = bookie_list
     bookie_sel_df = match_df[bookie_list]
     ax = sns.boxplot(data=bookie_sel_df, palette='Set2', showmeans=True)
