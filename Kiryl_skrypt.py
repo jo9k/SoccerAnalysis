@@ -11,7 +11,7 @@ pd.set_option('display.precision', 3)
 pd.set_option('display.max_columns', 115)
 pd.set_option('display.width', 160)
 #Etablishing connection with SQL database and creating cursor object
-conn = sqlite3.connect(r"C:/Python/Soccer1/database.sqlite")
+conn = sqlite3.connect(r"C:/Users/ernest.chocholowski/Desktop/Datasets/Soccer/database.sqlite")
 cur = conn.cursor()
 
 #Checking if it works fine
@@ -19,72 +19,69 @@ cur.execute("select * from country;").fetchall()
 
 #Match Table___________________________________________________________________
 #Creating pandas dataframe from table Match
-full_df = pd.read_sql_query("select * from match", conn)
-full_df.head(10)
-full_df.tail(10)
-full_df.describe()
+match_df = pd.read_sql_query("select * from match", conn)
+match_df.head(10)
+match_df.tail(10)
+match_df.describe()
 
 
 #Creating LOTS OF HISTOGRAMS
-full_df.hist(figsize = (100, 100))
-
-#B365 Home, Draw, Away odds
-full_df['B365H'].isnull().sum()
-sns.distplot(full_df['B365H'].dropna())
-sns.distplot(full_df['B365A'].dropna())
-sns.distplot(full_df['B365D'].dropna())
-
-fig, ax = plt.subplots()
-ax.set_xlim([0, 15])
-ax.set_ylim([0, 1.4])
-sns.distplot(full_df['B365H'].dropna(), ax = ax)
-sns.distplot(full_df['B365A'].dropna(), ax = ax)
-sns.distplot(full_df['B365D'].dropna(), ax = ax)
-plt.show()
+#match_df.hist(figsize = (100, 100))
 
 #Home, Draw, Away odds for all bookmakers
-bookmaker_names = ['B365', 'BW', 'IW' ,'LB', 'PS', 'WH', 'SJ', 'VC' ,'GB', 'BS']
-odds_types = ['H', 'D', 'A']
-bookmaker_dict = {}
+bookies = ['B365', 'BW', 'IW', 'LB', 'PS', 'WH', 'SJ', 'VC', 'GB', 'BS']
+bookies_H = [bookie+'H' for bookie in bookies]
+bookies_A = [bookie+'A' for bookie in bookies]
+bookies_D = [bookie+'D' for bookie in bookies]
 
-for name in bookmaker_names:
-    bookmaker_dict[name]=[]
-    for odd_type in odds_types:
-        bookmaker_dict[name].append(odd_type)
-        
-for name,odd_type in bookmaker_dict.items():
-    for i in range (3):
-        colname = str(name)+str(odd_type[i])
-        sns.distplot(full_df[colname].dropna(), ax=ax)
+for home, draw, away in zip(bookies_H,bookies_A,bookies_D):
+    fig, ax = plt.subplots()
+    sns.distplot(match_df[home].dropna(), ax=ax)
+    sns.distplot(match_df[draw].dropna(), ax=ax)
+    sns.distplot(match_df[away].dropna(), ax=ax)
+    #set title
+    plt.title(home[:-1], fontsize=16)
+    #remove x label
+    ax.set_xlabel('')
+    ax.set_xlim([0, 8])
     plt.show()
-    
 
-#All bookmakers - Home odds
-fig, ax = plt.subplots()
-ax.set_xlim([0, 8])
-ax.set_ylim([0, 0.7])
-for name,odd_type in bookmaker_dict.items():
-    colname = str(name)+str(odd_type[0])
-    sns.distplot(full_df[colname].dropna(), ax = ax, hist = False)
-plt.show()
+#_______All bookmakers - Home/Draw/Away odds
+bookies_types = {'Home odds':bookies_H, 'Draw odds':bookies_D, 'Away odds':bookies_A}
+for bookie_type, bookie_list in bookies_types.items():
+    fig, ax = plt.subplots()
+    ax.set_xlim([0, 8])
+    if bookie_type=='Home odds':
+        ax.set_ylim([0, 0.65])
+    elif bookie_type =='Draw odds':
+        ax.set_ylim([0, 2.3])
+    else:
+        ax.set_ylim([0, 0.35])
+    for bookie in bookie_list:
+        sns.distplot(match_df[bookie].dropna(), ax = ax, label=bookie, hist = False)
+    #set title
+    plt.title('Kernel Density Estimation of '+str(bookie_type)+' by bookie', fontsize=16)
+    #remove x label
+    ax.set_xlabel('')
+    #locate legend 
+    plt.legend(loc='best')
+    plt.figure(figsize=(30,30))
+    plt.show()
 
-#All bookmakers - Draw odds
-fig, ax = plt.subplots()
-ax.set_xlim([0, 8])
-ax.set_ylim([0, 2.5])
-for name,odd_type in bookmaker_dict.items():
-    colname = str(name)+str(odd_type[1])
-    sns.distplot(full_df[colname].dropna(), ax = ax, hist = False)
-plt.show()
+#_______ALL bookmakers - boxplots
+for bookie_type, bookie_list in bookies_types.items():
+    col_sel = bookie_list
+    bookie_sel_df = match_df[bookie_list]
+    ax = sns.boxplot(data=bookie_sel_df, palette='Set2', showmeans=True)
+    if bookie_type=='Home odds':
+        ax.set_ylim([1, 5])
+    elif bookie_type =='Draw odds':
+        ax.set_ylim([1, 10])
+    else:
+        ax.set_ylim([1, 5.5])
+    plt.title(str(bookie_type), fontsize=16)
+    plt.show()
 
-#All bookmakers - Away odds
-fig, ax = plt.subplots()
-ax.set_xlim([0, 8])
-ax.set_ylim([0, 0.35])
-for name,odd_type in bookmaker_dict.items():
-    colname = str(name)+str(odd_type[2])
-    sns.distplot(full_df[colname].dropna(), ax = ax, hist = False)
-plt.show()
 
 #Player attributes table_______________________________________________________
 full_players = pd.read_sql_query("select * from player_attributes", conn)
@@ -112,3 +109,12 @@ goals_home_vs_away = pd.crosstab(index = full_df["home_team_goal"],
 
 goals_home_vs_away
 
+def label_win (row):
+    if row['home_team_goal'] > row['away_team_goal']:
+        return 'WIN'
+    if row['home_team_goal'] == row['away_team_goal']:
+        return 'DRAW'
+    if row['home_team_goal'] < row['away_team_goal']:
+        return 'LOSE'
+new_df = pd.DataFrame()
+new_df['RESULT']=match_df.apply(lambda row: label_win(row), axis=1)
