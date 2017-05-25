@@ -24,6 +24,7 @@ full_df.head(10)
 full_df.tail(10)
 full_df.describe()
 
+
 #Creating LOTS OF HISTOGRAMS
 full_df.hist(figsize = (100, 100))
 
@@ -94,3 +95,20 @@ sns.distplot(full_players['overall_rating'].dropna())
 
 #Lots of histogram
 full_players.hist(figsize = (100, 100))
+
+#How many goals - Home\Away
+temp_data = full_df[['home_team_goal', 'away_team_goal']]
+color = ['red', 'lime']
+fig, ax = plt.subplots()
+ax.set_xlim([0, 10])
+ax.set_ylim([0, 9500])
+sns.distplot(temp_data.dropna(), ax = ax, kde = False, color = color 
+             ).add_legend()
+plt.show()
+
+#Contingency table
+goals_home_vs_away = pd.crosstab(index = full_df["home_team_goal"],
+                                 columns = full_df["away_team_goal"])
+
+goals_home_vs_away
+
