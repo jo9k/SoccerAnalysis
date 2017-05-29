@@ -36,9 +36,8 @@ bookies_D = [bookie+'D' for bookie in bookies]
 
 for home, draw, away in zip(bookies_H,bookies_A,bookies_D):
     fig, ax = plt.subplots()
-    sns.distplot(match_df[home].dropna(), ax=ax)
-    sns.distplot(match_df[draw].dropna(), ax=ax)
-    sns.distplot(match_df[away].dropna(), ax=ax)
+    for odds in [home, draw, away]:
+        sns.distplot(match_df[odds].dropna(), ax=ax, label=odds, hist = False)
     #set title
     plt.title(home[:-1], fontsize=16)
     #remove x label
@@ -49,34 +48,32 @@ for home, draw, away in zip(bookies_H,bookies_A,bookies_D):
 #_______All bookmakers - Home/Draw/Away odds | KDE + BOXPLOTS
 bookies_types = {'Home odds':bookies_H, 'Draw odds':bookies_D, 'Away odds':bookies_A}
 for bookie_type, bookie_list in bookies_types.items():
-    fig, ax = plt.subplots()
-    ax.set_xlim([0, 8])
+    fig, axes = plt.subplots(ncols=2)
+    axes[0].set_xlim([0, 8])
     if bookie_type=='Home odds':
-        ax.set_ylim([0, 0.65])
+        axes[0].set_ylim([0, 0.65])
     elif bookie_type =='Draw odds':
-        ax.set_ylim([0, 2.3])
+        axes[0].set_ylim([0, 2.3])
     else:
-        ax.set_ylim([0, 0.35])
+        axes[0].set_ylim([0, 0.35])
     for bookie in bookie_list:
-        sns.distplot(match_df[bookie].dropna(), ax = ax, label=bookie, hist = False)
+        sns.distplot(match_df[bookie].dropna(), ax = axes[0], label=bookie, hist = False)
     #set title
-    plt.title('Kernel Density Estimation of '+str(bookie_type)+' by bookie', fontsize=16)
     #remove x label
-    ax.set_xlabel('')
+    axes[0].set_xlabel('')
     #locate legend 
     plt.legend(loc='best')
-    plt.figure(figsize=(30,30))
-    plt.show()
     col_sel = bookie_list
     bookie_sel_df = match_df[bookie_list]
-    ax = sns.boxplot(data=bookie_sel_df, palette='Set2', showmeans=True)
+    axes[1] = sns.boxplot(data=bookie_sel_df, palette='Set2', showmeans=True)
     if bookie_type=='Home odds':
-        ax.set_ylim([1, 5])
+        axes[1].set_ylim([1, 5])
     elif bookie_type =='Draw odds':
-        ax.set_ylim([1, 10])
+        axes[1].set_ylim([1, 10])
     else:
-        ax.set_ylim([1, 5.5])
-    plt.title(str(bookie_type), fontsize=16)
+        axes[1].set_ylim([1, 5.5])
+    plt.suptitle(str(bookie_type), fontsize=16)
+    plt.figure(figsize=(60,30))
     plt.show()
 
 
@@ -88,15 +85,15 @@ players_df.head(1)
 sns.distplot(players_df['overall_rating'].dropna())
 
 #Lots of histogram
-players_df.hist(figsize = (100, 100))
+#players_df.hist(figsize = (100, 100))
 
 #How many goals - Home\Away
-temp_data = match_df[['home_team_goal', 'away_team_goal']]
+goals_df = match_df[['home_team_goal', 'away_team_goal']]
 color = ['red', 'lime']
 fig, ax = plt.subplots()
 ax.set_xlim([0, 10])
 ax.set_ylim([0, 9500])
-sns.distplot(temp_data.dropna(), ax = ax, kde = False, color = color 
+sns.distplot(goals_df.dropna(), ax = ax, kde = False, color = color 
              ).add_legend()
 plt.show()
 
