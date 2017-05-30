@@ -109,5 +109,23 @@ def label_win (row):
         return 'DRAW'
     if row['home_team_goal'] < row['away_team_goal']:
         return 'LOSE'
-new_df = pd.DataFrame()
-new_df['RESULT']=match_df.apply(lambda row: label_win(row), axis=1)
+
+match_df['RESULT']=match_df.apply(lambda row: label_win(row), axis=1)
+
+
+
+#Split data for train and test
+def split_data(data, targ):
+    #set target for training
+    target = data[targ]
+
+    # Import the train_test_split method
+    from sklearn.model_selection import train_test_split
+    # Split data into train (3/4th of data) and test (1/4th of data)
+    return train_test_split(data.drop('RESULT', axis=1), target, train_size = 0.75, random_state=0);
+
+train, test, target_train, target_test = split_data(match_df, 'RESULT')
+data = (train, test, target_train, target_test)
+
+
+
