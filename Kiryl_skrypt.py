@@ -127,5 +127,74 @@ def split_data(data, targ):
 train, test, target_train, target_test = split_data(match_df, 'RESULT')
 data = (train, test, target_train, target_test)
 
+##########################
+#######CHANGES BELOW######
+#######IRRELEVANT TO######
+#######SCRIPT ABOVE#######
+#####ONLY FOR NOTEBOOK####
+#===========Kiryl_02.06.2017=========================
+matches_df['home_team_mean_Age'] = matches_df[['home_player_1_Age',
+       'home_player_2_Age', 'home_player_3_Age', 'home_player_4_Age',
+       'home_player_5_Age', 'home_player_6_Age', 'home_player_7_Age',
+       'home_player_8_Age', 'home_player_9_Age', 'home_player_10_Age',
+       'home_player_11_Age']].mean(axis=1)
 
+matches_df['away_team_mean_Age'] = matches_df[['away_player_1_Age', 'away_player_2_Age',
+       'away_player_3_Age', 'away_player_4_Age', 'away_player_5_Age',
+       'away_player_6_Age', 'away_player_7_Age', 'away_player_8_Age',
+       'away_player_9_Age', 'away_player_10_Age', 'away_player_11_Age']].mean(axis = 1)
 
+#Home team mean age minus Away team mean age
+matches_df['age_Difference'] = matches_df['home_team_mean_Age'] - matches_df['away_team_mean_Age']
+
+#NOT FINISHED - NEED HELP /// Should be ok now - @E.Ch.
+#Function that calculates the overall rating separatly for defenders, midfielders and forwarders
+def calculate_group_ratings (row, home_flag, role):
+    import numpy as np
+    
+    #Define the vectors needed    
+    if home_flag == True:
+        prefix = 'home'
+    else:
+        prefix = 'away'
+    
+    players_lst = ['_player_2_', '_player_3_',
+       '_player_4_', '_player_5_',
+       '_player_6_', '_player_7_',
+       '_player_8_', '_player_9_',
+       '_player_10_', '_player_11_']
+    player_positions = [prefix+player+'position' for player in players_lst]
+    player_ratings = [prefix+player+'overall_rating' for player in players_lst]
+    
+    if role == 'defenders':
+        role_list = ['SW', 'RB', 'CB', 'LB', 'RWB', 'LWB']
+    elif role == 'midfielders':
+        role_list = ['DM', 'CM', 'LW', 'RW', 'AM']
+    elif role == 'forwarders':
+        role_list = ['RWF', 'CF', 'LWF']
+
+    scores_vector = []
+
+#Counts the number of players in Defenders, Midfielders, Forwarders    
+    for position, rank in zip(player_positions, player_ratings):
+        pos = row[position]
+        if pos in role_list:
+            rtng = row[rank]
+            scores_vector.append(rtng)
+
+#Counts the average of overall rating in Defeders/Midfieldes/Forwarders    
+    return np.mean(scores_vector)
+
+#===========PCA_Kiryl_02.06.2017=====================
+#Use this code after scaling the features
+#====================================================
+from sklearn.decomposition import PCA
+
+pca = PCA(n_components = 2)
+pca.fit(scaled_features_df.drop('RESULT', axis = 1))
+pca_features_df = pca.transform(scaled_features_df.drop('RESULT', axis = 1))
+scaled_features_df.shape
+pca_features_df.shape
+pca_features_pddf = pd.DataFrame(pca_features_df, index = ml_matches_df.index)
+pca_features_pddf.head(1)
+pca_features_pddf['RESULT'] = ml_matches_df['RESULT']
