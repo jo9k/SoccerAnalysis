@@ -33,7 +33,7 @@ True
 Lose 	0.43	0.01	0.56
 Draw 	0.23	0.01	0.76
 Win 	0.14	0.00	0.86",0.5274214157935088
-RandomForest_droppedMeaningless_StandardScaler_addedParams_Positions_ResultLabel_VSPoints_OverallScore,NA,100.0,54.46,1.0,"Pred 	Lose	Draw	Win
+RandomForest_droppedMeaningless_StandardScaler_addedParams_Positions_ResultLabel_VSPoints_OverallScore,,100.0,54.46,1.0,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.54	0.04	0.42
 Draw 	0.32	0.05	0.63
@@ -43,8 +43,38 @@ True
 Lose 	0.54	0.03	0.43
 Draw 	0.31	0.03	0.66
 Win 	0.14	0.01	0.85",0.5538859370731686
-xTrees_droppedMeaningless_StandardScaler_addedParams_Positions_ResultLabel_VSPoints_OverallScore,NA,85.0,53.63,0.49240650431064303,"Pred 	Lose	Draw	Win
+xTrees_droppedMeaningless_StandardScaler_addedParams_Positions_ResultLabel_VSPoints_OverallScore,,85.0,53.63,0.492406504310643,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.48	0.02	0.50
 Draw 	0.29	0.01	0.69
 Win 	0.14	0.01	0.86",0.5406751640820203
+RandomForest_droppedMeaningless_StandardScaler_gridParams_Positions_ResultLabelCorrected_VSPoints_OverallScore_OverallScoreGrouped_Entropy,NA,83.4,55.41,0.4281480990120474,"Pred 	Lose	Draw	Win
+True 
+Lose 	0.03	0.29	0.68
+Draw 	0.03	0.54	0.43
+Win 	0.01	0.14	0.85",0.553872383681117
+logreg_droppedMeaningless_StandardScaler_gridParams_Positions_ResultLabelCorrected_VSPoints_OverallScore_OverallScoreGrouped_Entropy,RESULT = -1.09 + -0.02*league_id + -0.02*season + 0.27*stage + -0.02*date + -0.26*home_team_api_id + 0.01*away_team_api_id + 0.01*home_player_1_position + 0.00*home_player_2_position + 0.05*home_player_3_position + 0.02*home_player_4_position + -0.01*home_player_5_position + 0.09*home_player_6_position + 0.01*home_player_7_position + 0.03*home_player_8_position + -0.01*home_player_9_position + 0.05*home_player_10_position + -0.02*home_player_11_position + 0.05*away_player_1_position + 0.00*away_player_2_position + 0.01*away_player_3_position + -0.00*away_player_4_position + -0.04*away_player_5_position + 0.02*away_player_6_position + -0.03*away_player_7_position + 0.03*away_player_8_position + -0.02*away_player_9_position + -0.02*away_player_10_position + 0.02*away_player_11_position + -0.02*home_player_1 + 0.01*home_player_2 + 0.01*home_player_3 + -0.00*home_player_4 + -0.03*home_player_5 + 0.05*home_player_6 + -0.03*home_player_7 + -0.04*home_player_8 + -0.01*home_player_9 + 0.03*home_player_10 + 0.05*home_player_11 + 0.02*away_player_1 + -0.01*away_player_2 + 0.01*away_player_3 + -0.04*away_player_4 + 0.03*away_player_5 + 0.01*away_player_6 + -0.01*away_player_7 + -0.06*away_player_8 + -0.01*away_player_9 + -0.02*away_player_10 + 0.01*home_player_1_overall_rating + 0.04*home_player_2_overall_rating + 0.06*home_player_3_overall_rating + 0.10*home_player_4_overall_rating + 0.15*home_player_5_overall_rating + 0.08*home_player_6_overall_rating + -0.03*home_player_7_overall_rating + -0.01*home_player_8_overall_rating + -0.00*home_player_9_overall_rating + -0.04*home_player_10_overall_rating + -0.04*home_player_11_overall_rating + -0.01*away_player_1_overall_rating + -0.02*away_player_2_overall_rating + -0.03*away_player_3_overall_rating + -0.00*away_player_4_overall_rating + 0.00*away_player_5_overall_rating + -0.01*away_player_6_overall_rating + -0.06*away_player_7_overall_rating + -0.02*away_player_8_overall_rating + -0.09*away_player_9_overall_rating + -0.13*away_player_10_overall_rating + -0.09*away_player_11_overall_rating + -0.09*away_player_11 + 0.02*B365H + 0.10*B365D + -0.26*B365A + -0.11*BWH + 0.03*BWD + -0.17*BWA + 0.06*IWH + 0.05*IWD + 0.02*IWA + 0.11*LBH + -0.07*LBD + 0.00*LBA + -0.01*PSH + -0.31*PSD + -0.08*PSA + 0.33*WHH + 0.02*WHD + 0.01*WHA + -0.22*SJH + -0.34*SJD + 0.18*SJA + -0.27*VCH + 0.33*VCD + 0.14*VCA + -0.10*GBH + 0.25*GBD + -0.10*GBA + -0.00*BSH + -0.20*BSD + -0.09*BSA + 0.16*VSPointDiff + -0.18*entropy + -0.06*home_formation + 0.05*away_formation + -0.08*home_defenders_score + -0.21*home_midfielders_score + 0.05*home_forwarders_score + 0.05*away_defenders_score + 0.03*away_midfielders_score + 0.17*away_forwarders_score,56.26,56.13,-0.4187879506295893,"Pred 	Lose	Draw	Win
+True 
+Lose 	0.06	0.28	0.66
+Draw 	0.06	0.55	0.38
+Win 	0.03	0.13	0.84",0.5541609318946021
+xTrees_droppedMeaningless_StandardScaler_gridParams_Positions_ResultLabelCorrected_VSPoints_OverallScore_OverallScoreGrouped_Entropy,NA,85.34,54.08,0.5388336838129374,"Pred 	Lose	Draw	Win
+True 
+Lose 	0.03	0.28	0.69
+Draw 	0.02	0.49	0.49
+Win 	0.01	0.14	0.85",0.5393670425969235
+RandomForestshortECH_StandardScaler_gridParams_Formation_ResultLabelCorrected_VSPoints_Entropy_MeanOdds_MeanAge_GK_RolesOverallScore),NA,76.35,56.54,0.24008181088044567,"Pred 	Lose	Draw	Win
+True 
+Lose 	0.07	0.35	0.58
+Draw 	0.08	0.61	0.32
+Win 	0.04	0.15	0.81",0.5582753086361892
+logregshortECH_StandardScaler_gridParams_Formation_ResultLabelCorrected_VSPoints_Entropy_MeanOdds_MeanAge_GK_RolesOverallScore),RESULT = -1.08 + 0.03*away_player_1_overall_rating + -0.01*home_defenders_score + 0.00*home_midfielders_score + 0.02*home_forwarders_score + 0.01*away_defenders_score + -0.00*away_midfielders_score + 0.01*away_forwarders_score + -0.05*Age_home + 0.04*Age_away + -0.00*Away_odds + -0.00*Home_odds + -0.12*Draw_odds + -0.34*home_formation + -0.02*away_formation + -0.01*VSPointDiff + -0.17*entropy,55.25,56.31,-0.4379205421124577,"Pred 	Lose	Draw	Win
+True 
+Lose 	0.01	0.31	0.68
+Draw 	0.00	0.58	0.42
+Win 	0.00	0.14	0.86",0.5553881861352089
+xTreesshortECH_StandardScaler_gridParams_Formation_ResultLabelCorrected_VSPoints_Entropy_MeanOdds_MeanAge_GK_RolesOverallScore),NA,74.97,56.65,0.17517272273856654,"Pred 	Lose	Draw	Win
+True 
+Lose 	0.03	0.33	0.63
+Draw 	0.04	0.60	0.36
+Win 	0.01	0.15	0.84",0.5582749701479403
