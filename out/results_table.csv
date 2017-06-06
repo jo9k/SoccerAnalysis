@@ -78,3 +78,23 @@ True
 Lose 	0.03	0.33	0.63
 Draw 	0.04	0.60	0.36
 Win 	0.01	0.15	0.84",0.5582749701479403
+RandomForest_shortECH_StandardScaler_gridParamsNew06.06_Formation_ResultLabelCorrected_VSPoints_Entropy_MeanOdds_MeanAge_GK_RolesOverallScore,NA,56.05,55.84,-0.42870855362070626,"Pred 	Lose	Draw	Win
+True 
+Lose 	0.01	0.29	0.69
+Draw 	0.01	0.55	0.45
+Win 	0.00	0.14	0.86",0.5587077924681677
+logreg_shortECH_StandardScaler_gridParamsNew06.06_Formation_ResultLabelCorrected_VSPoints_Entropy_MeanOdds_MeanAge_GK_RolesOverallScore,RESULT = -1.08 + 0.03*away_player_1_overall_rating + -0.01*home_defenders_score + 0.00*home_midfielders_score + 0.02*home_forwarders_score + 0.01*away_defenders_score + -0.00*away_midfielders_score + 0.01*away_forwarders_score + -0.05*Age_home + 0.04*Age_away + -0.00*Away_odds + -0.00*Home_odds + -0.12*Draw_odds + -0.34*home_formation + -0.02*away_formation + -0.01*VSPointDiff + -0.17*entropy,55.25,56.31,-0.4379205421124577,"Pred 	Lose	Draw	Win
+True 
+Lose 	0.01	0.31	0.68
+Draw 	0.00	0.58	0.42
+Win 	0.00	0.14	0.86",0.5553881861352089
+xTrees_shortECH_StandardScaler_gridParamsNew06.06_Formation_ResultLabelCorrected_VSPoints_Entropy_MeanOdds_MeanAge_GK_RolesOverallScore,NA,61.86,56.31,-0.2674278935651202,"Pred 	Lose	Draw	Win
+True 
+Lose 	0.01	0.31	0.68
+Draw 	0.01	0.57	0.42
+Win 	0.01	0.14	0.86",0.5571201523926173
+logreg_balanced_shortECH_StandardScaler_gridParamsNew06.06_Formation_ResultLabelCorrected_VSPoints_Entropy_MeanOdds_MeanAge_GK_RolesOverallScore,RESULT = 0.11 + 0.02*away_player_1_overall_rating + -0.00*home_defenders_score + 0.00*home_midfielders_score + 0.01*home_forwarders_score + 0.01*away_defenders_score + -0.00*away_midfielders_score + 0.01*away_forwarders_score + -0.03*Age_home + 0.02*Age_away + -0.00*Away_odds + 0.03*Home_odds + -0.03*Draw_odds + -0.20*home_formation + -0.02*away_formation + -0.01*VSPointDiff + -0.06*entropy,53.18,53.51,-0.534859005625657,"Pred 	Lose	Draw	Win
+True 
+Lose 	0.34	0.32	0.35
+Draw 	0.26	0.58	0.15
+Win 	0.23	0.15	0.61",0.5330893874560421
