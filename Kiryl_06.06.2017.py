@@ -36,5 +36,24 @@ season
                                 group by away_team_api_id, season
                                 order by away_team_api_id, season""", con)
 
-#The task is to connect these two tables
-#Should be easy, but I am a bit tired and lazy right now - will do it tommorow
+
+#New things_______________________________________________________________________________________________________
+#Merging two table into one
+teams_games_count = pd.DataFrame()
+teams_games_count['team_api_id'] = home_teams_game_counts['home_team_api_id']
+teams_games_count['WIN_COUNT'] = home_teams_game_counts['WIN_COUNT'] + away_teams_game_counts['WIN_COUNT']
+teams_games_count['DRAW_COUNT'] = home_teams_game_counts['DRAW_COUNT'] + away_teams_game_counts['DRAW_COUNT']
+teams_games_count['LOSE_COUNT'] = home_teams_game_counts['LOSE_COUNT'] + away_teams_game_counts['LOSE_COUNT']
+teams_games_count['season'] = home_teams_game_counts['season']
+
+#Counts all matches
+teams_games_count['ALL_COUNT'] = teams_games_count['WIN_COUNT'] + teams_games_count['DRAW_COUNT'] + teams_games_count['LOSE_COUNT']
+
+#Percetange Results
+teams_games_count['WIN_percent'] = teams_games_count['WIN_COUNT'] / teams_games_count['ALL_COUNT']
+teams_games_count['DRAW_percent'] = teams_games_count['DRAW_COUNT'] / teams_games_count['ALL_COUNT']
+teams_games_count['LOSE_percent'] = teams_games_count['LOSE_COUNT'] / teams_games_count['ALL_COUNT']
+
+#Rearrange columns
+teams_games_count = teams_games_count[['team_api_id', 'season', 'WIN_COUNT', 'DRAW_COUNT', 'LOSE_COUNT',
+       'ALL_COUNT', 'WIN_percent', 'DRAW_percent', 'LOSE_percent']]
