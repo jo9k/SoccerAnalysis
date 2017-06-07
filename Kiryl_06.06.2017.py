@@ -57,3 +57,40 @@ teams_games_count['LOSE_percent'] = teams_games_count['LOSE_COUNT'] / teams_game
 #Rearrange columns
 teams_games_count = teams_games_count[['team_api_id', 'season', 'WIN_COUNT', 'DRAW_COUNT', 'LOSE_COUNT',
        'ALL_COUNT', 'WIN_percent', 'DRAW_percent', 'LOSE_percent']]
+
+#Dummy variables datasets_________________________________________________________________________________________
+#Use after reading short_df
+
+#New data set for categorized features
+category_short_df = pd.DataFrame()
+vars_to_categorize = ['home_player_1_overall_rating', 'away_player_1_overall_rating',
+       'home_defenders_score', 'home_midfielders_score',
+       'home_forwarders_score', 'away_defenders_score',
+       'away_midfielders_score', 'away_forwarders_score']
+for category in vars_to_categorize:
+    category_short_df[category] = pd.cut(short_df[category], bins = 7, precision = 1)
+
+#Adding the rest of the variables from the original dataset that didn't need categorization
+vars_to_add = ['Age_home', 'Age_away', 'Home_odds', 'Draw_odds', 'Away_odds', 'home_formation',
+       'away_formation', 'VSPointDiff', 'entropy', 'RESULT']
+for add_var in vars_to_add:
+    category_short_df[add_var] = short_df[add_var]
+    
+#Creating Dataframes with Dummy variables: 1 Dataset = All columns for 1 variable
+to_dummy = ['home_player_1_overall_rating', 'away_player_1_overall_rating',
+       'home_defenders_score', 'home_midfielders_score',
+       'home_forwarders_score', 'away_defenders_score',
+       'away_midfielders_score', 'away_forwarders_score', 'home_formation',
+       'away_formation']
+dummy_short_df = {}
+
+for dummy in to_dummy:
+    dummy_short_df[dummy] = pd.get_dummies(category_short_df[dummy], prefix = dummy, drop_first = True)
+    
+#NOT FINISHED YET - TRYING TO MERGE ALL DATASETS INTO 1
+dict_names = ['home_player_1_overall_rating', 'away_player_1_overall_rating', 'home_defenders_score', 
+              'home_midfielders_score', 'home_forwarders_score', 'away_defenders_score', 'away_midfielders_score', 
+              'away_forwarders_score', 'home_formation', 'away_formation']
+with_dummy_df = pd.DataFrame()
+for df in dict_names:
+    with_dummy_df = pd.merge(category_short_df, df, on = df.index.values)
