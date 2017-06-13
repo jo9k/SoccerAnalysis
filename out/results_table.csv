@@ -78,22 +78,22 @@ True
 Lose 	0.03	0.33	0.63
 Draw 	0.04	0.60	0.36
 Win 	0.01	0.15	0.84",0.5582749701479403
-RandomForest_shortECH_OVR,NA,78.6,56.91,0.28812587393742606,"Pred 	Lose	Draw	Win
+RandomForest_shortECH_OVR,,78.6,56.91,0.2881258739374261,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.07	0.35	0.58
 Draw 	0.06	0.61	0.32
 Win 	0.03	0.16	0.82",0.558274709772364
-logreg_shortECH_OVR,NA,55.25,56.31,-0.4379205421124577,"Pred 	Lose	Draw	Win
+logreg_shortECH_OVR,,55.25,56.31,-0.4379205421124577,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.01	0.31	0.68
 Draw 	0.00	0.58	0.42
 Win 	0.00	0.14	0.86",0.5553881861352089
-xTrees_shortECH_OVR,NA,76.69,56.62,0.2256260750933896,"Pred 	Lose	Draw	Win
+xTrees_shortECH_OVR,,76.69,56.62,0.2256260750933896,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.03	0.34	0.63
 Draw 	0.04	0.60	0.37
 Win 	0.01	0.15	0.84",0.5583470941825326
-"RandomForest_shortECH_elo{nobonus,100,200}_SCALED",NA,76.42,56.31,0.2267857036829083,"Pred 	Lose	Draw	Win
+"RandomForest_shortECH_elo{nobonus,100,200}_SCALED",,76.42,56.31,0.2267857036829083,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.05	0.37	0.57
 Draw 	0.05	0.63	0.32
@@ -103,12 +103,12 @@ True
 Lose 	0.00	0.30	0.70
 Draw 	0.00	0.58	0.41
 Win 	0.00	0.15	0.85",0.5591392087602842
-"xTrees_shortECH_elo{nobonus,100,200}_SCALED",NA,74.74,55.47,0.1415696791348765,"Pred 	Lose	Draw	Win
+"xTrees_shortECH_elo{nobonus,100,200}_SCALED",,74.74,55.47,0.1415696791348765,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.01	0.32	0.67
 Draw 	0.01	0.58	0.41
 Win 	0.01	0.15	0.84",0.5556752502079099
-"RandomForest_shortECH_elo{nobonus,100,200}_NOTSCALED",NA,76.03,56.33,0.21153802036076885,"Pred 	Lose	Draw	Win
+"RandomForest_shortECH_elo{nobonus,100,200}_NOTSCALED",,76.03,56.33,0.21153802036076885,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.05	0.37	0.57
 Draw 	0.04	0.63	0.33
@@ -118,12 +118,12 @@ True
 Lose 	0.00	0.30	0.70
 Draw 	0.00	0.58	0.41
 Win 	0.00	0.15	0.85",0.5592113848699919
-"xTrees_shortECH_elo{nobonus,100,200}_NOTSCALED",NA,74.61,55.64,0.13786463458930986,"Pred 	Lose	Draw	Win
+"xTrees_shortECH_elo{nobonus,100,200}_NOTSCALED",,74.61,55.64,0.13786463458930984,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.01	0.32	0.67
 Draw 	0.01	0.58	0.41
 Win 	0.00	0.15	0.85",0.5574794446501411
-"RandomForest_shortECH_elo{nobonus,100,200}_SCALED_ResCorr",NA,76.23,56.68,0.23757568337892987,"Pred 	Lose	Draw	Win
+"RandomForest_shortECH_elo{nobonus,100,200}_SCALED_ResCorr",,76.23,56.68,0.2375756833789299,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.64	0.05	0.32
 Draw 	0.37	0.06	0.57
@@ -133,57 +133,57 @@ True
 Lose 	0.58	0.00	0.41
 Draw 	0.30	0.00	0.70
 Win 	0.15	0.00	0.85",0.5591392087602842
-"xTrees_shortECH_elo{nobonus,100,200}_SCALED_ResCorr",NA,74.43,55.47,0.21434092390713255,"Pred 	Lose	Draw	Win
+"xTrees_shortECH_elo{nobonus,100,200}_SCALED_ResCorr",,74.43,55.47,0.21434092390713252,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.57	0.01	0.41
 Draw 	0.31	0.01	0.67
 Win 	0.14	0.01	0.85",0.5570466223299135
-"RandomForest_balanced_shortECH_elo{nobonus,100,200}_SCALED_ResCorr",NA,80.67,55.35,0.24676151851894268,"Pred 	Lose	Draw	Win
+"RandomForest_balanced_shortECH_elo{nobonus,100,200}_SCALED_ResCorr",,80.67,55.35,0.2467615185189427,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.63	0.14	0.23
 Draw 	0.36	0.18	0.46
 Win 	0.17	0.11	0.72",0.5476651861711407
-"logreg_balanced_shortECH_elo{nobonus,100,200}_SCALED_ResCorr",RESULT = -0.99 + 0.03*away_player_1_overall_rating + -0.03*home_defenders_score + -0.03*home_midfielders_score + -0.01*home_forwarders_score + -0.00*away_defenders_score + 0.01*away_midfielders_score + -0.01*away_forwarders_score + 0.02*Age_home + 0.04*Age_away + -0.02*Away_odds + -0.52*Home_odds + 0.12*Draw_odds + 0.11*elo_home_cat + -0.03*elo_away_cat + -0.08*home_formation + 0.04*away_formation + 0.01*NoBonus + 0.17*100Bonus + -0.15*200Bonus + 0.02*VSPointDiff + -0.80*entropy,56.35,56.05,-0.27818194257061757,"Pred 	Lose	Draw	Win
+"logreg_balanced_shortECH_elo{nobonus,100,200}_SCALED_ResCorr",RESULT = -0.99 + 0.03*away_player_1_overall_rating + -0.03*home_defenders_score + -0.03*home_midfielders_score + -0.01*home_forwarders_score + -0.00*away_defenders_score + 0.01*away_midfielders_score + -0.01*away_forwarders_score + 0.02*Age_home + 0.04*Age_away + -0.02*Away_odds + -0.52*Home_odds + 0.12*Draw_odds + 0.11*elo_home_cat + -0.03*elo_away_cat + -0.08*home_formation + 0.04*away_formation + 0.01*NoBonus + 0.17*100Bonus + -0.15*200Bonus + 0.02*VSPointDiff + -0.80*entropy,56.35,56.05,-0.2781819425706176,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.63	0.09	0.28
 Draw 	0.37	0.12	0.52
 Win 	0.18	0.05	0.77",0.5600050617012002
-"xTrees_balanced_shortECH_elo{nobonus,100,200}_SCALED_ResCorr",NA,82.75,55.01,0.31930259896286806,"Pred 	Lose	Draw	Win
+"xTrees_balanced_shortECH_elo{nobonus,100,200}_SCALED_ResCorr",,82.75,55.01,0.3193025989628681,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.63	0.17	0.21
 Draw 	0.36	0.25	0.39
 Win 	0.18	0.15	0.67",0.5395821909354929
-"RandomForest_shortECH_eloCat{nobonus,100,200}_SCALED_ResCorr",NA,76.48,56.28,0.2406826570292283,"Pred 	Lose	Draw	Win
+"RandomForest_shortECH_eloCat{nobonus,100,200}_SCALED_ResCorr",,76.48,56.28,0.2406826570292283,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.63	0.04	0.33
 Draw 	0.37	0.06	0.57
 Win 	0.17	0.03	0.81",0.5607270831738533
-"logreg_shortECH_eloCat{nobonus,100,200}_SCALED_ResCorr",RESULT = -1.15 + 0.03*away_player_1_overall_rating + -0.03*home_defenders_score + -0.03*home_midfielders_score + -0.01*home_forwarders_score + -0.00*away_defenders_score + 0.01*away_midfielders_score + -0.01*away_forwarders_score + 0.02*Age_home + 0.04*Age_away + -0.02*Away_odds + -0.50*Home_odds + 0.13*Draw_odds + 0.11*elo_home_cat + -0.01*elo_away_cat + -0.10*NoBonus_cat + 0.12*100Bonus_cat + 0.11*200Bonus_cat + -0.21*home_formation + 0.04*away_formation + 0.02*VSPointDiff + -0.80*entropy,56.0,55.76,-0.38395413249164845,"Pred 	Lose	Draw	Win
+"logreg_shortECH_eloCat{nobonus,100,200}_SCALED_ResCorr",RESULT = -1.15 + 0.03*away_player_1_overall_rating + -0.03*home_defenders_score + -0.03*home_midfielders_score + -0.01*home_forwarders_score + -0.00*away_defenders_score + 0.01*away_midfielders_score + -0.01*away_forwarders_score + 0.02*Age_home + 0.04*Age_away + -0.02*Away_odds + -0.50*Home_odds + 0.13*Draw_odds + 0.11*elo_home_cat + -0.01*elo_away_cat + -0.10*NoBonus_cat + 0.12*100Bonus_cat + 0.11*200Bonus_cat + -0.21*home_formation + 0.04*away_formation + 0.02*VSPointDiff + -0.80*entropy,56.0,55.76,-0.3839541324916485,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.58	0.01	0.42
 Draw 	0.30	0.01	0.69
 Win 	0.14	0.00	0.85",0.5589228106189492
-"xTrees_shortECH_eloCat{nobonus,100,200}_SCALED_ResCorr",NA,73.92,55.41,0.20029199957534805,"Pred 	Lose	Draw	Win
+"xTrees_shortECH_eloCat{nobonus,100,200}_SCALED_ResCorr",,73.92,55.41,0.20029199957534805,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.57	0.01	0.42
 Draw 	0.31	0.01	0.68
 Win 	0.15	0.01	0.85",0.554809527454782
-"RandomForest_shortECH_eloCat{nobonus,100,200}_NotSCALED_ResCorr",NA,75.94,56.13,0.22339167323626286,"Pred 	Lose	Draw	Win
+"RandomForest_shortECH_eloCat{nobonus,100,200}_NotSCALED_ResCorr",,75.94,56.13,0.22339167323626288,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.63	0.05	0.32
 Draw 	0.37	0.05	0.58
 Win 	0.17	0.03	0.80",0.5611601398320994
-"logreg_shortECH_eloCat{nobonus,100,200}_NotSCALED_ResCorr",RESULT = -0.91 + 0.03*away_player_1_overall_rating + -0.03*home_defenders_score + -0.03*home_midfielders_score + -0.01*home_forwarders_score + -0.00*away_defenders_score + 0.01*away_midfielders_score + -0.01*away_forwarders_score + 0.02*Age_home + 0.04*Age_away + -0.02*Away_odds + -0.51*Home_odds + 0.12*Draw_odds + 0.10*elo_home_cat + 0.01*elo_away_cat + -0.13*home_formation + 0.04*away_formation + 0.02*VSPointDiff + -0.80*entropy + -0.05*NoBonus_cat + 0.04*100Bonus_cat + 0.05*200Bonus_cat,56.05,55.76,-0.38125241627399764,"Pred 	Lose	Draw	Win
+"logreg_shortECH_eloCat{nobonus,100,200}_NotSCALED_ResCorr",RESULT = -0.91 + 0.03*away_player_1_overall_rating + -0.03*home_defenders_score + -0.03*home_midfielders_score + -0.01*home_forwarders_score + -0.00*away_defenders_score + 0.01*away_midfielders_score + -0.01*away_forwarders_score + 0.02*Age_home + 0.04*Age_away + -0.02*Away_odds + -0.51*Home_odds + 0.12*Draw_odds + 0.10*elo_home_cat + 0.01*elo_away_cat + -0.13*home_formation + 0.04*away_formation + 0.02*VSPointDiff + -0.80*entropy + -0.05*NoBonus_cat + 0.04*100Bonus_cat + 0.05*200Bonus_cat,56.05,55.76,-0.3812524162739976,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.58	0.01	0.41
 Draw 	0.30	0.01	0.69
 Win 	0.14	0.00	0.85",0.5589949346535417
-"xTrees_shortECH_eloCat{nobonus,100,200}_NotSCALED_ResCorr",NA,74.01,55.7,0.2011025144406433,"Pred 	Lose	Draw	Win
+"xTrees_shortECH_eloCat{nobonus,100,200}_NotSCALED_ResCorr",,74.01,55.7,0.2011025144406433,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.58	0.01	0.41
 Draw 	0.32	0.02	0.67
 Win 	0.14	0.01	0.85",0.5546651231602513
-"RandomForest_evenshorterECH_elo{nobonus,100,200}_SCALED_ResCorr",NA,76.87,56.19,0.25127957307969595,"Pred 	Lose	Draw	Win
+"RandomForest_evenshorterECH_elo{nobonus,100,200}_SCALED_ResCorr",,76.87,56.19,0.25127957307969595,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.63	0.06	0.31
 Draw 	0.38	0.07	0.55
@@ -193,27 +193,27 @@ True
 Lose 	0.60	0.00	0.39
 Draw 	0.34	0.00	0.65
 Win 	0.16	0.00	0.84",0.5595005840224173
-"xTrees_evenshorterECH_elo{nobonus,100,200}_SCALED_ResCorr",NA,74.29,54.98,0.20329333882139877,"Pred 	Lose	Draw	Win
+"xTrees_evenshorterECH_elo{nobonus,100,200}_SCALED_ResCorr",,74.29,54.98,0.2032933388213988,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.60	0.02	0.38
 Draw 	0.37	0.02	0.61
 Win 	0.17	0.01	0.82",0.5592120618464899
-"RandomForest_balanced_evenshorterECH_elo{nobonus,100,200}_SCALED_ResCorr",NA,81.4,55.09,0.28574855825114887,"Pred 	Lose	Draw	Win
+"RandomForest_balanced_evenshorterECH_elo{nobonus,100,200}_SCALED_ResCorr",,81.4,55.09,0.2857485582511489,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.64	0.16	0.21
 Draw 	0.39	0.21	0.40
 Win 	0.18	0.13	0.69",0.5450679658366413
-"logreg_balanced_evenshorterECH_elo{nobonus,100,200}_SCALED_ResCorr",RESULT = -0.98 + 0.02*away_player_1_overall_rating + -0.05*home_defenders_score + -0.02*home_midfielders_score + -0.00*home_forwarders_score + 0.02*away_defenders_score + -0.00*away_midfielders_score + -0.04*away_forwarders_score + -0.01*Away_odds + -0.38*Home_odds + 0.19*Draw_odds + 0.09*elo_home + 0.03*elo_away + -0.18*NoBonus + -0.05*100Bonus + 0.06*200Bonus + -0.15*VSPointDiff,56.21,56.28,-0.27900210859720476,"Pred 	Lose	Draw	Win
+"logreg_balanced_evenshorterECH_elo{nobonus,100,200}_SCALED_ResCorr",RESULT = -0.98 + 0.02*away_player_1_overall_rating + -0.05*home_defenders_score + -0.02*home_midfielders_score + -0.00*home_forwarders_score + 0.02*away_defenders_score + -0.00*away_midfielders_score + -0.04*away_forwarders_score + -0.01*Away_odds + -0.38*Home_odds + 0.19*Draw_odds + 0.09*elo_home + 0.03*elo_away + -0.18*NoBonus + -0.05*100Bonus + 0.06*200Bonus + -0.15*VSPointDiff,56.21,56.28,-0.2790021085972048,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.65	0.08	0.26
 Draw 	0.41	0.13	0.46
 Win 	0.19	0.06	0.75",0.558851285448182
-"xTrees_balanced_evenshorterECH_elo{nobonus,100,200}_SCALED_ResCorr",NA,81.24,54.08,0.284261660851596,"Pred 	Lose	Draw	Win
+"xTrees_balanced_evenshorterECH_elo{nobonus,100,200}_SCALED_ResCorr",,81.24,54.08,0.284261660851596,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.62	0.19	0.19
 Draw 	0.40	0.24	0.36
 Win 	0.19	0.15	0.66",0.5433366244806158
-"RandomForest_manbalanced_evenshorterECH_elo{nobonus,100,200}_SCALED_ResCorr",NA,79.29,55.82,0.2691223418743304,"Pred 	Lose	Draw	Win
+"RandomForest_manbalanced_evenshorterECH_elo{nobonus,100,200}_SCALED_ResCorr",,79.29,55.82,0.2691223418743304,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.61	0.11	0.28
 Draw 	0.38	0.12	0.50
@@ -223,12 +223,12 @@ True
 Lose 	0.61	0.01	0.37
 Draw 	0.36	0.03	0.61
 Win 	0.16	0.01	0.82",0.5618097248194686
-"xTrees_manbalanced_evenshorterECH_elo{nobonus,100,200}_SCALED_ResCorr",NA,78.47,54.89,0.2551995753148808,"Pred 	Lose	Draw	Win
+"xTrees_manbalanced_evenshorterECH_elo{nobonus,100,200}_SCALED_ResCorr",,78.47,54.89,0.2551995753148808,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.60	0.07	0.33
 Draw 	0.37	0.08	0.55
 Win 	0.17	0.05	0.78",0.5566862104574122
-RandomForest_shortECH_elo{100}_SCALED_ResCorr,NA,76.8,56.39,0.25073888311622217,"Pred 	Lose	Draw	Win
+RandomForest_shortECH_elo{100}_SCALED_ResCorr,,76.8,56.39,0.25073888311622217,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.64	0.04	0.33
 Draw 	0.38	0.07	0.55
@@ -238,23 +238,48 @@ True
 Lose 	0.60	0.00	0.40
 Draw 	0.34	0.00	0.65
 Win 	0.15	0.00	0.85",0.5605106329574031
-xTrees_shortECH_elo{100}_SCALED_ResCorr,NA,74.41,55.27,0.20788920351092588,"Pred 	Lose	Draw	Win
+xTrees_shortECH_elo{100}_SCALED_ResCorr,,74.41,55.27,0.20788920351092588,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.60	0.01	0.39
 Draw 	0.36	0.02	0.63
 Win 	0.17	0.01	0.83",0.5598613343831677
-RandomForest_shortECH_elo{100}_SCALED_ResCorr_SMOTE,NA,84.56,53.56,0.39432818415660553,"Pred 	Lose	Draw	Win
+RandomForest_shortECH_elo{100}_SCALED_ResCorr_SMOTE,,84.56,53.56,0.3943281841566055,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.43	0.33	0.24
 Draw 	0.23	0.35	0.42
 Win 	0.09	0.20	0.71",0.0
-logreg_shortECH_elo{100}_SCALED_ResCorr_SMOTE,NA,51.6,50.91,-0.08666622931175838,"Pred 	Lose	Draw	Win
+logreg_shortECH_elo{100}_SCALED_ResCorr_SMOTE,,51.6,50.91,-0.08666622931175838,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.28	0.55	0.17
 Draw 	0.12	0.54	0.34
 Win 	0.04	0.33	0.63",0.0
-xTrees_shortECH_elo{100}_SCALED_ResCorr_SMOTE,NA,84.3,52.21,0.3919124756068202,"Pred 	Lose	Draw	Win
+xTrees_shortECH_elo{100}_SCALED_ResCorr_SMOTE,,84.3,52.21,0.3919124756068202,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.37	0.42	0.21
 Draw 	0.20	0.43	0.38
 Win 	0.08	0.25	0.67",0.0
+"GradientBoosting_superbasic_shortECH_elo{No,100,200}_SCALED_ResCorr",NA,60.06,56.57,-0.2002374296913907,"Pred 	Lose	Draw	Win
+True 
+Lose 	0.63	0.06	0.31
+Draw 	0.35	0.09	0.56
+Win 	0.17	0.04	0.79",0.5636860693338499
+"GradientBoosting_10Est_shortECH_elo{No,100,200}_SCALED_ResCorr",NA,56.59,55.87,-0.35464051153013676,"Pred 	Lose	Draw	Win
+True 
+Lose 	0.64	0.00	0.36
+Draw 	0.37	0.00	0.63
+Win 	0.18	0.00	0.82",0.563036536421596
+"GradientBoosting_10Est_0.9MF_shortECH_elo{No,100,200}_SCALED_ResCorr",NA,56.6,55.96,-0.35085810882542545,"Pred 	Lose	Draw	Win
+True 
+Lose 	0.65	0.00	0.35
+Draw 	0.38	0.00	0.62
+Win 	0.18	0.00	0.82",0.5635419774900107
+"GradientBoosting_10Est_0.9MF_shortECH_elo{No,100,200}_SCALED_ResCorr",NA,56.72,55.99,-0.3476160493642446,"Pred 	Lose	Draw	Win
+True 
+Lose 	0.65	0.00	0.34
+Draw 	0.39	0.00	0.61
+Win 	0.18	0.00	0.82",0.5625314078038726
+"GradientBoosting_1000Est_0.01LR_shortECH_elo{No,100,200}_SCALED_ResCorr",NA,59.95,56.51,-0.20374966077433676,"Pred 	Lose	Draw	Win
+True 
+Lose 	0.63	0.07	0.31
+Draw 	0.35	0.10	0.56
+Win 	0.17	0.04	0.79",0.5621705272553341
