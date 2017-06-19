@@ -133,7 +133,7 @@ True
 Lose 	0.58	0.00	0.41
 Draw 	0.30	0.00	0.70
 Win 	0.15	0.00	0.85",0.5591392087602842
-"xTrees_shortECH_elo{nobonus,100,200}_SCALED_ResCorr",,74.43,55.47,0.21434092390713252,"Pred 	Lose	Draw	Win
+"xTrees_shortECH_elo{nobonus,100,200}_SCALED_ResCorr",,74.43,55.47,0.21434092390713247,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.57	0.01	0.41
 Draw 	0.31	0.01	0.67
@@ -258,28 +258,70 @@ True
 Lose 	0.37	0.42	0.21
 Draw 	0.20	0.43	0.38
 Win 	0.08	0.25	0.67",0.0
-"GradientBoosting_superbasic_shortECH_elo{No,100,200}_SCALED_ResCorr",NA,60.06,56.57,-0.2002374296913907,"Pred 	Lose	Draw	Win
+"GradientBoosting_superbasic_shortECH_elo{No,100,200}_SCALED_ResCorr",,60.06,56.57,-0.2002374296913907,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.63	0.06	0.31
 Draw 	0.35	0.09	0.56
 Win 	0.17	0.04	0.79",0.5636860693338499
-"GradientBoosting_10Est_shortECH_elo{No,100,200}_SCALED_ResCorr",NA,56.59,55.87,-0.35464051153013676,"Pred 	Lose	Draw	Win
+"GradientBoosting_10Est_shortECH_elo{No,100,200}_SCALED_ResCorr",,56.59,55.87,-0.3546405115301368,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.64	0.00	0.36
 Draw 	0.37	0.00	0.63
 Win 	0.18	0.00	0.82",0.563036536421596
-"GradientBoosting_10Est_0.9MF_shortECH_elo{No,100,200}_SCALED_ResCorr",NA,56.6,55.96,-0.35085810882542545,"Pred 	Lose	Draw	Win
+"GradientBoosting_10Est_0.9MF_shortECH_elo{No,100,200}_SCALED_ResCorr",,56.6,55.96,-0.35085810882542545,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.65	0.00	0.35
 Draw 	0.38	0.00	0.62
 Win 	0.18	0.00	0.82",0.5635419774900107
-"GradientBoosting_10Est_0.9MF_shortECH_elo{No,100,200}_SCALED_ResCorr",NA,56.72,55.99,-0.3476160493642446,"Pred 	Lose	Draw	Win
+"GradientBoosting_10Est_0.9MF_shortECH_elo{No,100,200}_SCALED_ResCorr",,56.72,55.99,-0.3476160493642446,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.65	0.00	0.34
 Draw 	0.39	0.00	0.61
 Win 	0.18	0.00	0.82",0.5625314078038726
-"GradientBoosting_1000Est_0.01LR_shortECH_elo{No,100,200}_SCALED_ResCorr",NA,59.95,56.51,-0.20374966077433676,"Pred 	Lose	Draw	Win
+"GradientBoosting_1000Est_0.01LR_shortECH_elo{No,100,200}_SCALED_ResCorr",,59.95,56.51,-0.2037496607743368,"Pred 	Lose	Draw	Win
 True 
 Lose 	0.63	0.07	0.31
 Draw 	0.35	0.10	0.56
 Win 	0.17	0.04	0.79",0.5621705272553341
+"DvL_GradientBoosting_shortECH_elo{No,100,200}_SCALED_ResCorr",NA,69.08,61.91,-0.23886728441133354,"[[ 0.68153656  0.31846344]
+ [ 0.45375723  0.54624277]]",0.6191826522101752
+"DvL_RandomForest_shortECH_elo{No,100,200}_SCALED_ResCorr",NA,90.46,61.91,0.6176445575449913,"[[ 0.66542751  0.33457249]
+ [ 0.4349711   0.5650289 ]]",0.6128440366972476
+"DvL_logreg_shortECH_elo{No,100,200}_SCALED_ResCorr",RESULT = 0.14 + 0.00*away_player_1_overall_rating + 0.02*home_defenders_score + -0.03*home_midfielders_score + 0.00*home_forwarders_score + 0.00*away_defenders_score + 0.00*away_midfielders_score + -0.02*away_forwarders_score + -0.05*Age_home + 0.01*Age_away + -0.01*Away_odds + 0.24*Home_odds + -0.14*Draw_odds + -0.23*elo_home_cat + 0.00*elo_away_cat + 0.14*home_formation + -0.07*away_formation + -0.00*NoBonus + -0.10*100Bonus + 0.17*200Bonus + 0.04*VSPointDiff + 0.45*entropy,62.14,62.98,-0.5169439698331582,"[[ 0.6802974   0.3197026 ]
+ [ 0.42919075  0.57080925]]",0.6221851542952461
+"DvL_xTrees_shortECH_elo{No,100,200}_SCALED_ResCorr",NA,83.54,61.77,0.34045914355080076,"[[ 0.65923172  0.34076828]
+ [ 0.43063584  0.56936416]]",0.6201834862385323
+"WvD_GradientBoosting_shortECH_elo{No,100,200}_SCALED_ResCorr",NA,69.39,64.61,-0.22825721589753112,"[[ 0.66853933  0.33146067]
+ [ 0.37893082  0.62106918]]",0.6303591884968724
+"WvD_RandomForest_shortECH_elo{No,100,200}_SCALED_ResCorr",NA,90.15,63.95,0.6048129572132439,"[[ 0.69382022  0.30617978]
+ [ 0.42138365  0.57861635]]",0.6259032253063291
+"WvD_logreg_shortECH_elo{No,100,200}_SCALED_ResCorr",RESULT = -0.22 + -0.03*away_player_1_overall_rating + 0.02*home_defenders_score + 0.04*home_midfielders_score + 0.02*home_forwarders_score + 0.02*away_defenders_score + -0.01*away_midfielders_score + -0.02*away_forwarders_score + 0.06*Age_home + -0.10*Age_away + 0.06*Away_odds + 0.07*Home_odds + -0.15*Draw_odds + 0.21*elo_home_cat + 0.02*elo_away_cat + -0.01*home_formation + 0.01*away_formation + 0.05*NoBonus + -0.09*100Bonus + -0.03*200Bonus + 0.04*VSPointDiff + 0.59*entropy,63.57,65.73,-0.46159629895001286,"[[ 0.74578652  0.25421348]
+ [ 0.4418239   0.5581761 ]]",0.6299883032473561
+"WvD_xTrees_shortECH_elo{No,100,200}_SCALED_ResCorr",NA,85.82,62.61,0.43104981025926814,"[[ 0.71769663  0.28230337]
+ [ 0.47641509  0.52358491]]",0.6182960294778839
+"WvL_GradientBoosting_shortECH_elo{No,100,200}_SCALED_ResCorr",NA,78.39,75.7,0.12519594772123666,"[[ 0.79411765  0.20588235]
+ [ 0.28816199  0.71183801]]",0.7508340649692713
+"WvL_RandomForest_shortECH_elo{No,100,200}_SCALED_ResCorr",NA,88.11,74.58,0.5185260470665094,"[[ 0.78644501  0.21355499]
+ [ 0.30373832  0.69626168]]",0.7438103599648815
+"WvL_logreg_shortECH_elo{No,100,200}_SCALED_ResCorr",RESULT = -0.10 + -0.03*away_player_1_overall_rating + 0.01*home_defenders_score + 0.06*home_midfielders_score + 0.01*home_forwarders_score + -0.00*away_defenders_score + 0.01*away_midfielders_score + 0.02*away_forwarders_score + 0.07*Age_home + 0.01*Age_away + -0.04*Away_odds + 0.23*Home_odds + -0.28*Draw_odds + 0.21*elo_home_cat + -0.16*elo_away_cat + 0.27*home_formation + -0.14*away_formation + 0.07*NoBonus + -0.11*100Bonus + 0.20*200Bonus + 0.15*VSPointDiff + 1.12*entropy,75.18,73.95,-0.004650374231299326,"[[ 0.80179028  0.19820972]
+ [ 0.3364486   0.6635514 ]]",0.7476733977172958
+"WvL_xTrees_shortECH_elo{No,100,200}_SCALED_ResCorr",NA,83.31,73.67,0.32423045582366383,"[[ 0.80179028  0.19820972]
+ [ 0.34267913  0.65732087]]",0.7390693590869184
+"DvL_RandomForest_balanced_shortECH_elo{No,100,200}_SCALED_ResCorr",NA,90.32,62.37,0.612296928979187,"[[ 0.65055762  0.34944238]
+ [ 0.40751445  0.59248555]]",0.6160133444537114
+"DvL_logreg_balanced_shortECH_elo{No,100,200}_SCALED_ResCorr",RESULT = 0.22 + 0.00*away_player_1_overall_rating + 0.02*home_defenders_score + -0.03*home_midfielders_score + 0.00*home_forwarders_score + 0.00*away_defenders_score + 0.00*away_midfielders_score + -0.01*away_forwarders_score + -0.05*Age_home + 0.01*Age_away + -0.01*Away_odds + 0.24*Home_odds + -0.14*Draw_odds + -0.23*elo_home_cat + 0.01*elo_away_cat + 0.14*home_formation + -0.07*away_formation + -0.00*NoBonus + -0.10*100Bonus + 0.16*200Bonus + 0.04*VSPointDiff + 0.45*entropy,62.19,63.78,-0.5151614269778901,"[[ 0.63320942  0.36679058]
+ [ 0.35693642  0.64306358]]",0.62418682235196
+"DvL_xTrees_balanced_shortECH_elo{No,100,200}_SCALED_ResCorr",NA,83.3,61.64,0.3306551578468262,"[[ 0.62081784  0.37918216]
+ [ 0.38872832  0.61127168]]",0.6206839032527106
+"WvD_RandomForest_balanced_shortECH_elo{No,100,200}_SCALED_ResCorr",NA,90.18,64.24,0.6058058894815523,"[[ 0.66994382  0.33005618]
+ [ 0.38836478  0.61163522]]",0.6296165566758483
+"WvD_logreg_balanced_shortECH_elo{No,100,200}_SCALED_ResCorr",RESULT = -0.11 + -0.03*away_player_1_overall_rating + 0.02*home_defenders_score + 0.04*home_midfielders_score + 0.02*home_forwarders_score + 0.02*away_defenders_score + -0.01*away_midfielders_score + -0.02*away_forwarders_score + 0.06*Age_home + -0.10*Age_away + 0.05*Away_odds + 0.07*Home_odds + -0.15*Draw_odds + 0.20*elo_home_cat + 0.02*elo_away_cat + -0.01*home_formation + 0.01*away_formation + 0.05*NoBonus + -0.09*100Bonus + -0.03*200Bonus + 0.05*VSPointDiff + 0.59*entropy,63.77,64.76,-0.4536528408035454,"[[ 0.66853933  0.33146067]
+ [ 0.37578616  0.62421384]]",0.6342542588065866
+"WvD_xTrees_balanced_shortECH_elo{No,100,200}_SCALED_ResCorr",NA,85.65,62.98,0.4240992843811091,"[[ 0.66151685  0.33848315]
+ [ 0.40566038  0.59433962]]",0.6212651786467942
+"WvL_RandomForest_balanced_shortECH_elo{No,100,200}_SCALED_ResCorr",NA,88.64,75.07,0.5403250646205848,"[[ 0.76214834  0.23785166]
+ [ 0.26323988  0.73676012]]",0.7473222124670764
+"WvL_logreg_balanced_shortECH_elo{No,100,200}_SCALED_ResCorr",RESULT = 0.11 + -0.03*away_player_1_overall_rating + 0.01*home_defenders_score + 0.06*home_midfielders_score + 0.01*home_forwarders_score + -0.00*away_defenders_score + 0.02*away_midfielders_score + 0.02*away_forwarders_score + 0.07*Age_home + 0.02*Age_away + -0.04*Away_odds + 0.20*Home_odds + -0.29*Draw_odds + 0.21*elo_home_cat + -0.14*elo_away_cat + 0.26*home_formation + -0.14*away_formation + 0.07*NoBonus + -0.14*100Bonus + 0.21*200Bonus + 0.15*VSPointDiff + 1.12*entropy,75.13,74.37,-0.0065459409751318365,"[[ 0.74936061  0.25063939]
+ [ 0.26323988  0.73676012]]",0.7474978050921861
+"WvL_xTrees_balanced_shortECH_elo{No,100,200}_SCALED_ResCorr",NA,83.99,74.44,0.3517161736092371,"[[ 0.7544757   0.2455243 ]
+ [ 0.26791277  0.73208723]]",0.7394205443371378
